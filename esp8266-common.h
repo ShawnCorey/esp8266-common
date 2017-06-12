@@ -28,6 +28,10 @@
 #define WIFI_HOST_NAME       CONFIG_AP_NAME
 #endif
 
+#ifndef CONFIG_AP_TIMEOUT
+#define CONFIG_AP_TIMEOUT 300
+#endif
+
 class esp8266Common {
   public:
         bool OTAupdateInProgress = false;

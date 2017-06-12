@@ -25,7 +25,7 @@ void esp8266Common::prepWifiManager(char* hostname, char* apName, char* apPasswo
         }
     }
 
-    wifiManager.setConfigPortalTimeout(300);
+    wifiManager.setConfigPortalTimeout(CONFIG_AP_TIMEOUT);
     WiFi.hostname(hostname);
     if(!wifiManager.autoConnect(apName, apPassword)){
         Serial.println("Failed to connect and hit timeout");
